@@ -1,0 +1,1055 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>DASHBOARD</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!---------------------------------fontawesome------------------------------->
+<!-- <link rel="stylesheet" href="fontawesome/fontawesome-free-5.15.1-web/css/all.css"> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+  <!----------------------------------------------------------------->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+
+<!--------------------------------j-quary--------------------------------------------------->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!---------------------------------sweet alert-------------------------------------------->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<!-----------------------------data-aos cdn----------------------------------------->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<!---------------------------data-aos js-------------------------------------------->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+  <!-- Add your site or application content here -->
+
+<!-----------------------------------HEADER----------------------------------->
+
+<div class="container header ">
+  <div class="row justify-content-between">
+    <div class="col-2 brand">
+      <img src="img/logo2.png" alt="">
+    </div>
+    <div class="col-5 brand-name">
+      <h1><span>RE</span>CRUIT</h1>
+    </div>
+    <div class="col-lg-2">
+      <div class="row headericonrow">
+        <div class="col-4">
+          <div class="header-icon" data-aos="fade-down" data-aos-duration="1300">
+            <ul>
+              <li data-toggle="tooltip" title="Facebook"><i class="fab fa-facebook-f"></i></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="header-icon" data-aos="fade-down" data-aos-duration="1300">
+            <ul>
+              <li data-toggle="tooltip" title="Instagram"><i class="fab fa-instagram"></i></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="header-icon" data-aos="fade-down" data-aos-duration="1300">
+            <ul>
+              <li data-toggle="tooltip" title="G-mail"><i class="fas fa-envelope"></i></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <!---------------------------------NAVBER------------------------------------->
+<div class="container-fluid p-0 m-0 fluid-nav sticky-top">
+  <div class="container container-nav p-0 ">
+    <div class="col m-0 p-0">
+      <nav class="navbar navbar-expand-lg">
+        <button class="navbar-toggler ml-auto" data-toggle="collapse" data-target="#mynavbar"  id="icon">
+          <i class="fas fa-align-justify"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+          <ul class="nav navbar-nav mr-auto" data-aos="zoom-in" data-aos-duration="1000">
+            <li class="nav-item"><a class="nav-link mr-2" href="index.html">HOME</a></li>
+            <li class="nav-item"><a class="nav-link mr-2" href="#" id="active">DASHBOARD</a></li>
+          </ul>
+          
+          <ul class="nav navbar-nav" data-aos="zoom-in" data-aos-duration="1000">
+            <li class="nav-item" ><a class="nav-link mr-2" data-toggle="modal" data-target="#mylogout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+<!--=====================logout=====================-->
+<div class="modal fade" id="mylogout" data-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" id="content-1">
+      <div class="modal-body">
+        <div class="container-fluid fom-page">
+          <div class="row">
+            <div class="col">
+              <form class="from-inline">
+                <i id="logout-icon" class="fas fa-sign-out-alt"></i>
+                <h1 class="text-center">Are you sure you want to log out ?</h1>
+                <p class="logout-p">We can't notify you if you do.</p>
+                <div class="row">
+                  <div class="col-6 logout-btn">
+                    <a href="#" data-toggle="modal" data-target="#mycencel" data-dismiss="modal" id="logout-cencel">
+                      <button type="submit" class="btn btn-denger btn-block" id="forgot-btn">Cencel</button>
+                    </a>
+                  </div>
+                  <div class="col-6">
+                    <a href="#" data-toggle="modal" data-target="#myloutconfirm" data-dismiss="modal" id="logout-yes">
+                      <button type="submit" class="btn btn-denger btn-block" id="forgot-btn">Yes Log Me Out</button>
+                    </a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!----=============================logout cencel=====================------>
+<div class="modal fade" id="mycencel" data-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" id="content-1">
+      <div class="modal-body">
+        <div class="container-fluid fom-page">
+          <div class="row">
+            <div class="col">
+              <form class="from-inline" action="dashboard.html">
+                <p class="logout-c-p">Your Profile Is Safe !</p>
+                <div class="row">
+                  <div class="col-4 ml-auto" id="logout-yes">
+                    <button type="submit" class="btn btn-denger btn-block" id="forgot-btn">OK</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!----=============================logout confirm=====================------>
+<div class="modal fade" id="myloutconfirm" data-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" id="content-1">
+      <div class="modal-body">
+        <div class="container-fluid fom-page">
+          <div class="row">
+            <div class="col">
+              <form class="from-inline"  action="index.html">
+                <i id="logout-icon" class="far fa-check-circle"></i>
+                <p class="logout-c-p">Your Profile has been Log Out!</p>
+                <div class="row">
+                  <div class="col-4 ml-auto">
+                    <a href="#" id="logout-yes">
+                      <button type="submit" class="btn btn-denger btn-block" id="forgot-btn">OK</button>
+                    </a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!----------------------------------------------------DASHBOARD--------------------------------------------------->
+<div class="container-fluid p-0">
+  <section class="dashboard-body">
+      <div class="container-fluid Banner fluid-slide">
+          <div class="row">
+              <div class="col-10 m-auto" data-aos="zoom-in" data-aos-duration="1300">
+                  <h1>Dashboard</h1>
+                  <hr class="about-ul" color="white" size="5" >
+              </div>
+          </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-lg-2" data-aos="zoom-in" data-aos-duration="1300">
+            <img src="img/15.jpg" alt="Neena Kochhar" title="Neena Kochhar" class="d-employee-img">
+          </div>
+          <div class="col-md-5 employee-details" data-aos="fade-left" data-aos-duration="1300">
+            <h3><b>Neena Kochhar</b></h3>
+            <p>Marketing Manager</p>
+          </div>
+        </div>  
+      </div>
+  </section>
+</div>
+
+<!------------------------------------------------main page---------------------------------------------------->
+<div id="accordion">
+
+    <!---------------=========================left menu bar====================------------------------------>
+<div class="row">
+    <div class="col-2">
+        <div class="side-navigation">
+            <ul>
+                <div id="headingOne">
+                    <li data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <a href="#Information" id="fade-information" title="Edit Information">
+                            <span class="icon"><i class="fas fa-info-circle"></i></span>
+                            <span class="title">Edit Information</span>
+                        </a>
+                    </li>
+                </div>
+                <div id="headingTwo">
+                    <li class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <a href="#password" title="Change Password">
+                            <span class="icon"><i class="fas fa-key" ></i></span>
+                            <span class="title">Change Password</span>
+                        </a>
+                    </li>
+                </div>
+                <div id="headingThree">
+                    <li class="collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <a href="#leave" title="Leave Application">
+                            <span class="icon"><i class="fas fa-th"></i></span>
+                            <span class="title">Leave Application</span>
+                        </a>
+                    </li>
+                </div>
+                
+                <li>
+                    <a href=""  data-toggle="modal" data-target="#mylogout" title="Logout">
+                        <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
+                        <span class="title">Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-8 right-form" data-aos="fade-left" data-aos-duration="1300">
+        <!--=========================profile============================-->
+        <div class="row">
+            <div class="col">
+                <H2 data-aos="zoom-in" data-aos-duration="1300"><b>PROFILE</b></H2>
+                <div class="row">
+                    <div class="col-md-lg-6">
+                    <div class="information">
+                        <div class="form-group">
+                        <div class="row">
+                            <div class="col-5">
+                            <label for="name">Full Name :</label>
+                            </div>
+                            <div class="col-7">
+                            <input type="text" class="form-control-plaintext" id="name" value="Neena Kochhar" readonly><br>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-5">
+                            <label for="name">Organization Name  :</label>
+                            </div>
+                            <div class="col-7">
+                            <input type="text" class="form-control-plaintext" id="name" value="RECRUIT" readonly><br>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-5">
+                            <label for="name">Gender :</label>
+                            </div>
+                            <div class="col-7">
+                            <input type="text" class="form-control-plaintext" id="name" value="Female" readonly><br>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-5">
+                            <label for="name">DOB :</label>
+                            </div>
+                            <div class="col-7">
+                            <input type="text" class="form-control-plaintext" id="name" value="09/11/2001" readonly><br>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-5">
+                            <label for="name">Mobile No. :</label>
+                            </div>
+                            <div class="col-7">
+                            <input type="text" class="form-control-plaintext" id="name" value="1236547890" readonly><br>
+                            </div>
+                        </div>
+                        
+                        </div> 
+                    </div>
+                    </div>
+            
+                    <div class="col-md-lg-6">
+                    <div class="information">
+                        <div class="form-group">
+                        <div class="row">
+                            <div class="col-5">
+                            <label for="name">Email Id :</label>
+                            </div>
+                            <div class="col-7">
+                            <input type="text" class="form-control-plaintext" id="name" value="neena123@gmail.com" readonly><br>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-5">
+                            <label for="name">Qualification :</label>
+                            </div>
+                            <div class="col-7">
+                            <input type="text" class="form-control-plaintext" id="name" value="MP,HS,BCA,MCA" readonly><br>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-5">
+                            <label for="Engineering">Department :</label>
+                            </div>
+                            <div class="col-7">
+                            <input type="text" class="form-control-plaintext" id="Engineering" value="Engineering" readonly><br>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-5">
+                            <label for="name">Designation :</label>
+                            </div>
+                            <div class="col-7">
+                            <input type="text" class="form-control-plaintext" id="name" value="Marketing Manager" readonly><br>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-5">
+                            <label for="name">Blood Group :</label>
+                            </div>
+                            <div class="col-7">
+                            <input type="text" class="form-control-plaintext" id="name" value="A+" readonly><br>
+                            </div>
+                        </div>
+                        </div> 
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--=========================edit information============================-->
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="row">
+                <div class="col">
+                    <a name="Information"></a>
+                    <H2><b>EDIT  INFORMATION</b></H2>
+                  <div class="row">
+                  <div class="col-md-lg-2">
+                      <img src="img/15.jpg" alt="Neena Kochhar" title="Neena Kochhar" class="infor-employee-img">
+                  </div>
+                  <div class="col-md-lg-5">
+                      <form class="choose-file">
+                      <input type="file">
+                      <p>Extable formates: jpg, png only max size is 500 kb and min size 70 kb.</p>
+                      </form>
+                  </div>
+                  </div>
+                  <div class="information">
+                  <h3>ACCOUNT INFORMATION</h3>
+                  <form>
+                  <div class="form-group">
+                      <div class="row">
+                      <div class="col-lg-2">
+                          <label for="f-name">First Name</label>
+                      </div>
+                      <div class="col-lg-10">
+                          <input type="text" class="form-control" id="f-name" value="Neena" required><br>
+                      </div>
+                      </div>
+                      <div class="row">
+                      <div class="col-lg-2">
+                          <label for="l-name">Last Name</label>
+                      </div>
+                      <div class="col-lg-10">
+                          <input type="text" class="form-control" id="l-name" value="Kochhar" required><br>
+                      </div>
+                      </div>
+                      <div class="row">
+                      <div class="col-lg-2">
+                          <label for="email">E-mail</label>
+                      </div>
+                      <div class="col-lg-10">
+                          <input type="email" class="form-control" id="email" value="neena159@gmail.com" required><br>
+                      </div>
+                      </div>
+                      <div class="row">
+                      <div class="col-lg-2 ml-auto ok">
+                          <button type="submit" class="btn btn1"><span>Update</span></button>
+                      </div>
+                      </div>
+                  </div> 
+                  </form>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <!--=========================change password============================-->
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="row">
+                <div class="col">
+                    <a name="password"></a>
+                    <H2><b> CHANGE PASSWORD</b></H2>
+                    <form class="information">
+                    <div class="form-group">
+                        <div class="row">
+                        <div class="col-lg-2">
+                            <label for="curr-password">Current Password</label>
+                        </div>
+                        <div class="col-lg-10">
+                            <input type="password" class="form-control" id="curr-password"  maxlength="12" placeholder="Enter Current Password" required>
+                            <h6 id="currpass-check" class="h6-check"></h6><br>
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-lg-2">
+                            <label for="new-password">New Password</label>
+                        </div>
+                        <div class="col-lg-10">
+                            <input type="password" class="form-control" id="new-password"  maxlength="12" placeholder="Enter New Password" required>
+                            <h6 id="newpass-check" class="h6-check"></h6><br>
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-lg-2">
+                            <label for="con-password">Confirm Password</label>
+                        </div>
+                        <div class="col-lg-10">
+                            <input type="password" class="form-control" id="con-password" maxlength="12" placeholder="Enter Confirm Password" required>
+                            <h6 id="conpass-check" class="h6-check"></h6><br>
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-lg-2 ml-auto ok">
+                            <button type="submit" class="btn btn1" id="update-pass-btn"><span>Update</span></button>
+                        </div>
+                        </div>
+                    </div> 
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!--=========================leave form============================-->
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <div class="row">
+                <div class="col">
+                    <a name="leave"></a>
+                        <H2><b>LEAVE APPLICATION</b></H2>
+                        <form class="information">
+                          <div class="form-group">
+                            <div class="row">
+                              <div class="col-lg-2">
+                                <label for="le-name">Name</label>
+                              </div>
+                              <div class="col-lg-10">
+                                <input type="text" class="form-control" id="le-name" placeholder="Enter name" autocomplete="off" required>
+                                <h6 id="lename-check" class="h6-check"></h6><br>
+                              </div>
+                            </div>
+                            
+                            <div class="row">
+                              <div class="col-lg-2">
+                                <label for="l-from">Absence From</label>
+                              </div>
+                              <div class="col-lg-10">
+                                <input type="date" class="form-control" max="" id="fromDate" required>
+                                <h6 id="lfrom-check" class="h6-check"></h6><br>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-lg-2">
+                                <label for="l-through">Absence Through</label>
+                              </div>
+                              <div class="col-lg-10">
+                                <input type="date" class="form-control" min="" id="throughDate" required>
+                                <h6 id="lthrough-check" class="h6-check"></h6><br>
+                              </div>
+                            </div>
+                            <!--<div class="row">
+                              <div class="col-lg-2">
+                                <label for="days">How many days leave apply?</label>
+                              </div>
+                              <div class="col-lg-10">
+                                <input type="text" class="form-control" id="days" placeholder="How many days" autocomplete="off" required>
+                                <small class="form-text text-muted">Filled Automatically</small><br>
+                              </div>
+                            </div>-->
+                            <div class="row">
+                              <div class="col-lg-2">
+                                <label for="leReason">Reason</label>
+                              </div>
+                              <div class="col-lg-10">
+                                <textarea class="form-control" name="message"cols="30" rows="7" id="leReason" placeholder="Enter your reason"></textarea>
+                                <h6 id="leReason-check" class="h6-check"></h6><br>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-lg-2 ml-auto ok">
+                                <button type="submit" class="btn btn1" id="le-submit-btn"><span>Submit</span></button>
+                              </div>
+                            </div>
+                          </div> 
+                        </form>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<div class="sidetoggle" onclick="toggleMenu()"></div>
+<script type="text/javascript">
+    function toggleMenu()
+    {
+        let sidenavigation = document.querySelector('.side-navigation');
+        let sidetoggle = document.querySelector('.sidetoggle');
+        sidenavigation.classList.toggle('active');
+        sidetoggle.classList.toggle('active');
+    }
+</script>
+
+ <!--------------------------------------------------FOOTER--------------------------------------------------->
+ <section class="footer">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3 footer-box">
+        <div class="row" data-aos="zoom-in" data-aos-duration="1300">
+          <div class="col-2 brand">
+            <img src="img/logo2.png" alt="">
+          </div>
+          <div class="col-xl-5 brand-name">
+            <h1><span>RE</span>CRUIT</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col footer-describe" data-aos="fade-right" data-aos-duration="1300">
+            <p class="describe">
+              RECRUIT focuses on the employee to ensure they are performing their best in order to achieve bigger organizational goals. In doing so, teams can capitalize on employee strengths and needs to maximize on a functional and efficient workplace.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 footer-box">
+        <div class="center">
+            <div data-aos="zoom-in" data-aos-duration="1300">
+              <h2 class="font">CONTACT INFO</h2>
+            </div>
+            <br>
+            <div class="add">
+                <div class="place" data-aos="fade-right" data-aos-duration="1300">
+                    <span class="fas fa-map-marker-alt"></span>
+                    <span class="text">Conti, Purba Medinipur</span>
+                    <hr color="" width="90%"> 
+                </div>
+                <div class="phone" data-aos="fade-right" data-aos-duration="1300">
+                    <span class="fas fa-phone-alt"></span>
+                    <span class="text">+09874563211</span>
+                    <hr color="" width="90%"> 
+                </div>
+                <div class="email" data-aos="fade-right" data-aos-duration="1300">
+                    <span class="fas fa-envelope"></span>
+                    <span class="text">employee123@gmail.com</span>
+                    <hr color="" width="90%"> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <div class="col-md-3 footer-box">
+          <div class="center1">
+            <div data-aos="zoom-in" data-aos-duration="1300">
+              <h2 class="font">SITE MAP</h2>
+            </div><br>
+              <div class="nevi">
+                  <ul>
+                    <div data-aos="fade-left" data-aos-duration="1300">
+                      <a href="service.html"><li>Service Policy</li></a>
+                      <hr color="white" width="90%">
+                    </div> 
+                    <div data-aos="fade-left" data-aos-duration="1300">
+                      <a href="contact.html"><li>Contact</li></a>
+                      <hr color="white" width="90%">
+                    </div> 
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-3 footer-box">
+        <div class="row">
+          <div class="col">
+            <div data-aos="zoom-in" data-aos-duration="1300">
+              <h2 class="font">SUBSCRIBE TO NEWSLETTET</h2>
+            </div><br>
+          <form  data-aos="fade-left" data-aos-duration="1300" class="subs-form">
+            <input class="subs-input" type="email" placeholder="Your E-mail here" id="subs-email" autocomplete="off" required>
+            <input type="submit" value="Subscribe" class="subs-button subscribe" id="subs-btn">
+            <h6 id="subs-email-cheack" class="h6-check"></h6>
+          </form>
+          </div>
+        </div>
+        
+        <div class="row lastrow">
+          <div class="col-2">
+            <div class="social" data-aos="fade-down" data-aos-duration="1300">
+              <ul>
+                <li data-toggle="tooltip" title="Facebook"><i class="fab fa-facebook-f"></i></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="social" data-aos="fade-down" data-aos-duration="1300">
+              <ul>
+                <li data-toggle="tooltip" title="Twitter"><i class="fab fa-twitter"></i></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="social" data-aos="fade-down" data-aos-duration="1300">
+              <ul>
+                <li data-toggle="tooltip" title="Instagram"><i class="fab fa-instagram"></i></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="social" data-aos="fade-down" data-aos-duration="1300">
+              <ul>
+                <li data-toggle="tooltip" title="Linkedin"><i class="fab fa-invision"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>  
+</section>
+<div class="container-fluid footer-bottom">
+<div class="row">
+  <div class="col">
+    <p>©2021 All Right Reserved || Employer Organization Name || Design By:Soma Bar</p>
+  </div>
+</div>
+</div>
+
+
+
+<!--=======================subscribe-email===========================-->
+<script>
+  $(document).ready(function(){
+  $("#subs-email-cheack").hide();
+  var subsemail_err = true;
+ 
+    $("#subs-email").keyup(function(){
+      subsemailcheck();
+    });
+    function subsemailcheck(){
+      
+      var semail=$("#subs-email").val().trim();
+      var regi=/^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]w+)*$/
+      if(regi.test(semail))
+      {
+        $("#subs-email-cheack").hide();
+      }
+      else
+      {
+        $("#subs-email-cheack").show();
+        $("#subs-email-cheack").html("** Please fill your Correct Email id");
+        $("#subs-email-cheack").focus();
+        $("#subs-email-cheack").css({"color":"red","font-size":"14px","padding":"5px 0px 0px 0px"})
+        subsemail_err=false;
+        return false;
+      }
+    }
+    $("#subs-btn").click(function(){
+      subsemail_err = true;
+      subsemailcheck();
+      if(subsemail_err == true)
+      {
+        return true;
+      }
+      else
+      {
+        return false;
+      }
+
+    });
+  });
+</script>
+
+<script> 
+  $(document).ready(function(){
+    $("#fade-information").click(function(){
+      $("#fade-r-information").slideToggle("slow");
+    });
+ 
+  
+      $("#fade-password").click(function(){
+        $("#fade-r-password").slideToggle("slow");
+      });
+    
+
+    $("#fade-leave").click(function(){
+      $("#fade-r-leave").slideToggle("slow");
+    });
+
+  });
+  </script>
+
+  <!----------------------change pass jquary------------------------>
+<script>
+  $(document).ready(function(){
+
+    $("#currpass-check").hide();
+    $("#newpass-check").hide();
+    $("#conpass-check").hide();
+
+    var curpass_err = true;
+    var newpass_err = true;
+    var conpass_err = true;
+
+    $("#curr-password").keyup(function(){
+      curpasscheck();
+    });
+    function curpasscheck(){
+      var curpattern=/^[a-zA-Z0-9]*$/;
+      var curpass_val= $("#curr-password").val();
+      if(curpattern.test(curpass_val) && curpass_val.length !='')
+      {
+        $("#currpass-check").hide();
+        $("#curr-password").css("border","2px solid #276678")
+      }
+      else
+      {
+        $("#currpass-check").show();
+        $("#currpass-check").html("** Please fill the current password");
+        $("#currpass-check").focus();
+        $("#currpass-check").css({"color":"red","font-size":"14px"})
+        $("#curr-password").css("border","2px solid red")
+        curpass_err=false;
+        return false;
+      }
+
+    }
+
+    /*====================*/
+    $("#new-password").keyup(function(){
+      newpasscheck();
+    });
+    function newpasscheck(){
+      var newpattern=/^[a-zA-Z0-9]*$/;
+      var newpass_val= $("#new-password").val();
+      if(newpattern.test(newpass_val) && newpass_val.length !='')
+      {
+        $("#newpass-check").hide();
+        $("#new-password").css("border","2px solid #276678")
+      }
+      else
+      {
+        $("#newpass-check").show();
+        $("#newpass-check").html("** Please fill the new password");
+        $("#newpass-check").focus();
+        $("#newpass-check").css({"color":"red","font-size":"14px"})
+        $("#new-password").css("border","2px solid red")
+        newpass_err=false;
+        return false;
+      }
+
+      if((newpass_val.length < 7) || (newpass_val.length >12))
+      {
+        $("#newpass-check").show();
+        $("#newpass-check").html("** Password must be between 7 and 12");
+        $("#newpass-check").focus();
+        $("#newpass-check").css({"color":"red","font-size":"14px"})
+        $("#new-password").css("border","2px solid red")
+        newpass_err=false;
+        return false;
+      }
+      else
+      {
+        $("#newpass-check").hide();
+        $("#new-password").css("border","2px solid #276678")
+      }
+
+    }
+
+    /*====================*/
+    $("#con-password").keyup(function(){
+      conpasscheck();
+    });
+    function conpasscheck(){
+      var conpattern=/^[a-zA-Z0-9]*$/;
+      var conpass = $("#con-password").val();
+      var newpass_val= $("#new-password").val();
+      if(conpattern.test(conpass) && conpass.length !='')
+      {
+        $("#conpass-check").hide();
+        $("#con-password").css("border","2px solid #276678")
+      }
+      else
+      {
+        $("#conpass-check").show();
+        $("#conpass-check").html("** Please fill the confirm password");
+        $("#conpass-check").focus();
+        $("#conpass-check").css({"color":"red","font-size":"14px"})
+        $("#con-password").css("border","2px solid red")
+        conpass_err=false;
+        return false;
+      }
+      if(newpass_val != conpass)
+      {
+        $("#conpass-check").show();
+        $("#conpass-check").html("** Password are not Matching");
+        $("#conpass-check").focus();
+        $("#conpass-check").css({"color":"red","font-size":"14px"})
+        $("#con-password").css("border","2px solid red")
+        conpass_err=false;
+        return false;
+      }
+      else
+      {
+        $("#conpass-check").hide();
+        $("#con-password").css("border","2px solid #276678")
+      }
+    }
+/*===================*/
+    $("#update-pass-btn").click(function(){
+      curpass_err = true;
+      newpass_err = true;
+      conpass_err = true;
+
+      curpasscheck();
+      newpasscheck();
+      conpasscheck();
+      if((curpass_err == true) && (newpass_err == true) && (conpass_err == true))
+      {
+        return true;
+      }
+      else
+      {
+        return false;
+      }
+    });
+
+  });
+</script>
+
+ <!----------------------leave jquary------------------------>
+ <script>
+   $(document).ready(function(){
+
+    $("#lename-check").hide();
+    $("#lfrom-check").hide();
+    $("#lthrough-check").hide();
+    $("#leReason-check").hide();
+    var lename_err = true;
+    var lfrom_err = true;
+    var lthrough_err = true;
+    var leReason_err = true;
+
+    $("#le-name").keyup(function(){
+      lenamecheck();
+    });
+    function lenamecheck(){
+      var lnamepattern=/^[a-z A-Z]*$/;
+      var lename_val= $("#le-name").val().trim();
+      if(lnamepattern.test(lename_val) && lename_val.length !='')
+      {
+        $("#lename-check").hide();
+        $("#le-name").css("border","2px solid #276678")
+      }
+      else
+      {
+        $("#lename-check").show();
+        $("#lename-check").html("** Please fill your name");
+        $("#lename-check").focus();
+        $("#lename-check").css({"color":"red","font-size":"14px"})
+        $("#le-name").css("border","2px solid red")
+        lename_err=false;
+        return false;
+      }
+    }
+    /*===============*/
+    $("#fromDate").keyup(function(){
+      lfromcheck();
+    });
+    function lfromcheck(){
+      var lfrom_val= $("#fromDate").val().trim();
+      if( lfrom_val.length !='')
+      {
+        $("#lfrom-check").hide();
+        $("#fromDate").css("border","2px solid #276678")
+      }
+      else
+      {
+        $("#lfrom-check").show();
+        $("#lfrom-check").html("** Please fill your name");
+        $("#lfrom-check").focus();
+        $("#lfrom-check").css({"color":"red","font-size":"14px"})
+        $("#fromDate").css("border","2px solid red")
+        lfrom_err=false;
+        return false;
+      }
+    }
+    /*===============*/
+    $("#throughDate").keyup(function(){
+      lthroughcheck();
+    });
+    function lthroughcheck(){
+      var lthrough_val= $("#throughDate").val().trim();
+      if( lthrough_val.length !='')
+      {
+        $("#lthrough-check").hide();
+        $("#throughDate").css("border","2px solid #276678")
+      }
+      else
+      {
+        $("#lthrough-check").show();
+        $("#lthrough-check").html("** Please fill your name");
+        $("#lthrough-check").focus();
+        $("#lthrough-check").css({"color":"red","font-size":"14px"})
+        $("#throughDate").css("border","2px solid red")
+        lthrough_err=false;
+        return false;
+      }
+    }
+    /*=================*/
+    var fromDate;
+    $('#fromDate').on('change',function(){
+      fromDate = $(this).val();
+      $('#throughDate').prop('min',function(){
+        return fromDate;
+      })
+    });
+
+    var throughDate;
+    $('#throughDate').on('change',function(){
+      throughDate = $(this).val();
+      $('#fromDate').prop('max',function(){
+        return throughDate;
+      })
+    });
+    /*===============*/
+    $("#leReason").keyup(function(){
+      leReasoncheck();
+    });
+    function leReasoncheck(){
+      var lreasonpattern=/^[a-z A-Z0-9]*$/;
+      var leReason_val= $("#leReason").val().trim();
+      if(lreasonpattern.test(leReason_val) && leReason_val.length !='')
+      {
+        $("#leReason-check").hide();
+        $("#leReason").css("border","2px solid #276678")
+      }
+      else
+      {
+        $("#leReason-check").show();
+        $("#leReason-check").html("** Please fill your reason ");
+        $("#leReason-check").focus();
+        $("#leReason-check").css({"color":"red","font-size":"14px"})
+        $("#leReason").css("border","2px solid red")
+        leReason_err=false;
+        return false;
+      }
+    }
+/*===================*/
+  $("#le-submit-btn").click(function(){
+    lename_err = true;
+    lfrom_err = true;
+    lthrough_err = true;
+    leReason_err = true;
+    lenamecheck();
+    lfromcheck();
+    lthroughcheck();
+    leReasoncheck();
+    
+      if((lename_err == true) && (lfrom_err == true) && (lthrough_err = true) && (leReason_err == true))
+      {
+        return true;
+      }
+      else
+      {
+        return false;
+      }
+    });
+   });
+ </script>
+<!--==================scroll-up=====================-->
+<div class="sticky-top">
+  <i class="fas fa-arrow-circle-up" id="scroll-up"></i>
+</div>
+<script>
+  $(document).ready(function(){
+    $(window).scroll(function(){
+      if($(this).scrollTop()>40)
+      {
+        $("#scroll-up").fadeIn();
+      }else
+      {
+        $("#scroll-up").fadeOut();
+      }
+    });
+
+    $("#scroll-up").click(function(){
+      $('html,body').animate({scrollTop:0},800);
+    });
+  });
+</script>
+<!--===========================data aos========================-->
+<script>
+  AOS.init();
+</script>
+
+
+
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <!-- <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script> -->
+</body>
+
+</html>
